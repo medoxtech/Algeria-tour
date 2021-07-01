@@ -1,6 +1,25 @@
-$clr-primary-light: #55c57a;
-$clr-primary: #7ed56f;
-$clr-primary-dark: #28b485;
+// COLORS
+$clr-primary: #74c69d;
+$clr-primary-light: #cceed1;
+$clr-primary-dark: #49a079;
+$clr-secondary: #f48c06;
+$clr-secondary-light: #ffba08;
+$clr-secondary-dark: #dc2e02c5;
+$clr-tertiary: #2998ff;
+$clr-tertiary-light: #2998ff;
+$clr-tertiary-dark: #5643fa;
 $clr-grey-dark: #777;
+$clr-grey-ligth-1: #f7f7f7;
+$clr-grey-ligth-2: #ddd;
 $clr-white: #fff;
 $clr-black: #000;
+// card size
+$card-height: 52rem;
+
+// font
+$default-fs: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
