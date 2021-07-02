@@ -44,7 +44,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #cceed1, #49a079);
+  background-image: linear-gradient(to right, #55c57a, #28b485);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -104,8 +104,65 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-medium {
+  margin-top: 20rem; }
+
 .u-margin-top-big {
-  margin-top: 10rem; }
+  margin-top: 15rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4rem;
+  padding: 6rem 9rem 6rem;
+  font-size: 1.6rem;
+  transform: skewX(-15deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: skewX(15deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transition: all 0.8s;
+    transform: translateX(-4rem); }
+  .story__text {
+    transform: translateX(3rem) skewX(15deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 125%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    transition: all 0.8s; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1.4);
+    filter: blur(3px) brightness(80%); }
 
 .card {
   -moz-perspective: 70rem;
@@ -126,9 +183,9 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #ffba08, #f48c06, #dc2e02c5); }
+        background-image: linear-gradient(to right bottom, #ffba08, #ffb900, #ff7730); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #cceed1, #74c69d, #49a079); }
+        background-image: linear-gradient(to right bottom, #7ed56f, #55c57a, #28b485); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #2998ff, #5643fa); }
   .card:hover .card__side--front {
@@ -142,9 +199,9 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture-1 {
-      background-image: linear-gradient(to right bottom, #ffba08, #f48c06, #dc2e02c5), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #ffba08, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture-2 {
-      background-image: linear-gradient(to right bottom, #cceed1, #74c69d, #49a079), url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a, #28b485), url(../img/nat-6.jpg); }
     .card__picture-3 {
       background-image: linear-gradient(to right bottom, #2998ff, #2998ff, #5643fa), url(../img/nat-7.jpg); }
   .card__heading {
@@ -162,9 +219,9 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span-1 {
-      background-image: linear-gradient(to right bottom, #ffba08, #f48c06, #dc2e02c5); }
+      background-image: linear-gradient(to right bottom, #ffba08, #ffb900, #ff7730); }
     .card__heading-span-2 {
-      background-image: linear-gradient(to right bottom, #cceed1, #74c69d, #49a079); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a, #28b485); }
     .card__heading-span-3 {
       background-image: linear-gradient(to right bottom, #2998ff, #2998ff, #5643fa); }
   .card__details {
@@ -216,7 +273,7 @@ body {
       top: 2rem;
       left: 20rem; }
     .composition__photo:hover {
-      outline: solid 1.3rem #74c69d;
+      outline: solid 1.3rem #55c57a;
       transform: scale(1.1);
       z-index: 10; }
   .composition:hover .composition__photo:not(:hover) {
@@ -261,25 +318,26 @@ body {
     background-color: #fff; }
 
 .btn--green {
-  background-color: #74c69d;
-  color: #cceed1; }
+  background-color: #55c57a;
+  color: #fff; }
   .btn--green::after {
-    background-color: #74c69d; }
+    background-color: #55c57a; }
 
 .btn-animated {
   animation: moveInBottom 0.7s ease-out; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #74c69d;
+  font-weight: 700;
+  color: #55c57a;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #74c69d;
+  border-bottom: 1px solid #55c57a;
   padding: 3px;
   transition: all 0.2s; }
 
 .btn-text:hover {
-  background-color: #74c69d;
+  background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -301,7 +359,7 @@ body {
     margin-bottom: 0.5rem;
     display: inline-block;
     background-clip: text;
-    color: #49a079;
+    color: #28b485;
     z-index: 5; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
@@ -335,7 +393,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(116, 198, 157, 0.6), rgba(73, 160, 121, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.6), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
@@ -360,7 +418,7 @@ body {
 .section-features {
   padding: 25rem 0;
   margin-top: -11rem;
-  background-image: linear-gradient(to right bottom, rgba(204, 238, 209, 0.8), rgba(73, 160, 121, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
   .section-features > * {
@@ -368,5 +426,9 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 25rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -11rem; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }

@@ -1,0 +1,53 @@
+.story {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($clr-black, 0.1);
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: $radius;
+	padding: 6rem 9rem 6rem;
+	font-size: $default-fs;
+	transform: skewX(-15deg);
+
+	&__shape {
+		width: 15rem;
+		height: 15rem;
+		float: left;
+		shape-outside: circle(50% at 50% 50%);
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+		-webkit-clip-path: circle(50% at 50% 50%);
+		transform: skewX(15deg);
+		position: relative;
+	}
+
+	&__img {
+		height: 100%;
+		transition: all 0.8s;
+		transform: translateX(-4rem);
+	}
+
+	&__text {
+		transform: translateX(3rem) skewX(15deg);
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 125%);
+		text-align: center;
+		color: $clr-white;
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		transition: all 0.8s;
+	}
+
+	&:hover &__caption {
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover &__img {
+		transform: translateX(-4rem) scale(1.4);
+		filter: blur(3px) brightness(80%);
+	}
+}

@@ -48,7 +48,7 @@
 
 	&--green {
 		background-color: $clr-primary;
-		color: $clr-primary-light;
+		color: $clr-white;
 		&::after {
 			background-color: $clr-primary;
 		}
@@ -63,6 +63,7 @@
 	&:link,
 	&:visited {
 		font-size: $default-fs;
+		font-weight: 700;
 		color: $clr-primary;
 		display: inline-block;
 		text-decoration: none;

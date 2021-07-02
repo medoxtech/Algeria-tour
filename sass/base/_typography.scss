@@ -37,11 +37,7 @@ body {
 	font-size: 3.5rem;
 	text-transform: uppercase;
 	font-weight: 700;
-	background-image: linear-gradient(
-		to right,
-		$clr-primary-light,
-		$clr-primary-dark
-	);
+	background-image: linear-gradient(to right, $clr-primary, $clr-primary-dark);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
